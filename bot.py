@@ -2,7 +2,10 @@ import os
 import asyncio
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
-from scraper import obtener_todas_las_ofertas
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "scraper"))
+from __init__ import obtener_todas_las_ofertas
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
